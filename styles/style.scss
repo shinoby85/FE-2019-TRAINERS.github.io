@@ -14,46 +14,32 @@ $home__btn_down-block-size: 50px;
   height: $block-size;
 }
 
-//worksans
-@font-face {
-  font-family: "worksans";
-  src: url("../fonts/worksansmedium.woff2"),
-  url("../fonts/worksansmedium.woff"),
-  url("../fonts/worksansmedium.ttf");
-  font-weight: 500;
-  font-style: normal;
+@mixin title-block-style {
+  text-align: center;
+  .block-title {
+    display: block;
+    font-family: "playfairdisplay", sans-serif;
+    font-weight: 700;
+    font-size: 2.6rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .block-annotation {
+    font-family: "worksans", sans-serif;
+    line-height: 1.65;
+    font-size: 1rem;
+    letter-spacing: .004em;
+    font-weight: 400;
+    margin: 0 auto 30px;
+    width: 720px;
+  }
 }
 
-@font-face {
-  font-family: "worksans";
-  src: url("../fonts/worksansbold.woff2"),
-  url("../fonts/worksansbold.woff"),
-  url("../fonts/worksansbold.ttf");
-  font-weight: 700;
-  font-style: normal;
-}
 
-//playfairdisplay
-@font-face {
-  font-family: "playfairdisplay";
-  src: url("../fonts/playfairdisplaybold.woff2"),
-  url("../fonts/playfairdisplaybold.woff"),
-  url("../fonts/playfairdisplaybold.ttf");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "playfairdisplay";
-  src: url("../fonts/playfairdisplayitalic.woff2"),
-  url("../fonts/playfairdisplayitalic.woff"),
-  url("../fonts/playfairdisplayitalic.ttf");
-  font-weight: 400;
-  font-style: italic;
-}
 
 body {
   font-family: "worksans", sans-serif;
+  margin: 0;
 }
 
 .container {
@@ -77,6 +63,10 @@ body {
 
 .header-desk__logo {
   display: block;
+}
+
+.header-desk__logo_icon {
+  fill: #fff;
 }
 
 .logo__text {
@@ -167,7 +157,8 @@ body {
   font-weight: 500;
   transition: background-color .3s;
 }
-.home__btn:hover{
+
+.home__btn:hover {
   background-color: #444;
 }
 
@@ -195,8 +186,22 @@ body {
 }
 
 .aboute {
+  padding: 90px 0 90px;
+  box-sizing: border-box;
   min-height: 150px;
 }
+
+.aboute__container {
+
+  @include title-block-style();
+}
+
+.statistics {
+  min-height: 240px;
+  background: url("../images/bg-pattern.jpg") no-repeat;
+  background-size: cover;
+}
+
 
 .block-show {
   display: block;
