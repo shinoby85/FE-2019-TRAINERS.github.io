@@ -1,4 +1,4 @@
-//Font worksans
+/*Font worksans*/
 @font-face {
     font-family: "worksans";
     src: url("../fonts/worksans.woff2") format("woff2"),
@@ -26,7 +26,7 @@
     font-style: normal;
 }
 
-//Font playfairdisplay
+/*Font playfairdisplay*/
 @font-face {
     font-family: "playfairdisplay";
     src: url("../fonts/playfairdisplaybold.woff2") format("woff2"),
@@ -45,7 +45,7 @@
     font-style: italic;
 }
 
-//Font icon
+/*Font icon*/
 @font-face {
     font-family: 'fontawesome-webfont';
     src: url('../fonts/fontawesome-webfont.eot');

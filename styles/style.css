@@ -164,7 +164,158 @@ body {
 .statistics {
   min-height: 240px;
   background: url("../images/bg-pattern.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center; }
+
+.statistics__container {
+  display: flex;
+  justify-content: space-between; }
+
+.statistics__stat-position {
+  min-width: 255px; }
+
+.stat-position__label {
+  display: block;
+  float: left;
+  margin-right: 20px; }
+
+.stat-position__number {
+  display: block;
+  float: left;
+  color: #fff;
+  font-family: 'worksans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 65%; }
+
+.stat-position__text {
+  display: block;
+  float: left;
+  color: #fff;
+  font-family: 'worksans', sans-serif;
+  font-size: .97rem;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.project {
+  min-height: 255px;
+  padding: 90px 0 90px;
+  box-sizing: border-box; }
+
+.project__container {
+  text-align: center; }
+  .project__container .block-title {
+    display: block;
+    font-family: "playfairdisplay", sans-serif;
+    font-weight: 700;
+    font-size: 2.6rem;
+    margin-top: 0;
+    margin-bottom: 30px; }
+  .project__container .block-annotation {
+    font-family: "worksans", sans-serif;
+    line-height: 1.65;
+    font-size: 1rem;
+    letter-spacing: .004em;
+    font-weight: 400;
+    margin: 0 auto 30px;
+    width: 720px; }
+
+.project__best {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 370px); }
+
+.project__best__position {
+  position: relative; }
+
+.project__best__position__bg {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: filter 0.3s; }
+
+.project__best__position:hover .project__best__position__bg {
+  filter: brightness(40%); }
+
+.project-1 {
+  background: url("../images/portfolio-7-sm.jpg") no-repeat 50%;
   background-size: cover; }
+
+.project-2 {
+  background: url("../images/portfolio-4-sm.jpg") no-repeat 50%;
+  background-size: cover; }
+
+.project-3 {
+  background: url("../images/portfolio-5-sm.jpg") no-repeat 50%;
+  background-size: cover; }
+
+.project-4 {
+  background: url("../images/portfolio-9-sm.jpg") no-repeat 50%;
+  background-size: cover; }
+
+.project-5 {
+  background: url("../images/portfolio-3-sm.jpg") no-repeat 50%;
+  background-size: cover; }
+
+.project-6 {
+  background: url("../images/portfolio-8-sm.jpg") no-repeat 50%;
+  background-size: cover; }
+
+.project-7 {
+  background: url("../images/portfolio-2-sm.jpg") no-repeat 50%;
+  background-size: cover; }
+
+.project-8 {
+  background: url("../images/portfolio-6-sm.jpg") no-repeat 50%;
+  background-size: cover; }
+
+.project-9 {
+  background: url("../images/portfolio-12-sm.jpg") no-repeat 50%;
+  background-size: cover; }
+
+.project__best__position__link {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff; }
+
+.project__best__position__title {
+  display: block;
+  margin-bottom: 20px;
+  font-family: 'playfairdisplay', sans-serif;
+  font-size: 1.69rem;
+  font-style: normal;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: transform .4s .2s,opacity .4s .2s; }
+
+.project__best__position__category {
+  display: block;
+  font-family: 'worksans', sans-serif;
+  font-size: .95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: transform .4s .3s,opacity .4s .3s; }
+
+.project__best__position:hover .project__best__position__title,
+.project__best__position:hover .project__best__position__category {
+  opacity: 1;
+  transform: translateY(0px); }
 
 .block-show {
   display: block; }
