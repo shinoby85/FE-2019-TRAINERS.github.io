@@ -56,6 +56,35 @@
     font-style: normal;
     font-weight: normal;
 }
+[class^='fa-'], [class*=' fa-']{
+    display: inline-block;
+    font-family: 'fontawesome-webfont';
+    speak: none;
+    box-sizing: border-box;
+    padding-top: 5px;
+    width: 25px;
+    height: 25px;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    color: #000;
+    font-size: 1.13rem;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.fa-twitter:before{
+    content: "\f099";
+}
+.fa-facebook:before{
+    content: "\f09a";
+}
+.fa-dribbble:before{
+    content: "\f17d";
+}
+.fa-instagram:before{
+    content: "\f16d";
+}
 
 @font-face {
     font-family: 'pe-icon-7';
