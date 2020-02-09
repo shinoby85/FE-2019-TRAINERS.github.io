@@ -117,14 +117,14 @@ body {
   color: #fff;
 
 }
-.nav-item-black:hover{
+
+.nav-item-black:hover {
   color: #000;
 }
 
 .home-section {
   padding-top: 250px;
   height: 100vh;
-  width: 99vmax;
   position: relative;
   z-index: 0;
   box-sizing: border-box;
@@ -485,25 +485,28 @@ body {
   background-color: #252525;
   transition: all .5s;
 }
-.input_btn:hover{
+
+.input_btn:hover {
   cursor: pointer;
   background-color: #444444;
 }
 
-.footer{
+.footer {
   box-sizing: border-box;
   background-color: #EBEBEB;
   min-height: 155px;
   padding: 50px 0 50px;
 }
-.footer__social{
+
+.footer__social {
   width: 120px;
   margin: 0 auto;
   height: 25px;
   display: flex;
   justify-content: space-between;
 }
-.footer__social__link{
+
+.footer__social__link {
   display: flex;
   opacity: .4;
   text-decoration: none;
@@ -511,10 +514,12 @@ body {
   color: #000;
   font-size: 1.13rem;
 }
-.footer__social__link:hover{
+
+.footer__social__link:hover {
   opacity: 1;
 }
-.footer__text{
+
+.footer__text {
   text-align: center;
   margin-bottom: 0;
   font-family: "worksans", sans-serif;
@@ -522,6 +527,7 @@ body {
   letter-spacing: .004em;
   opacity: .5;
 }
-.hidden{
+
+.hidden {
   display: none;
 }

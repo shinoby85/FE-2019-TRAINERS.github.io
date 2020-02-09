@@ -54,7 +54,6 @@ body {
 .home-section {
   padding-top: 250px;
   height: 100vh;
-  width: 99vmax;
   position: relative;
   z-index: 0;
   box-sizing: border-box; }
