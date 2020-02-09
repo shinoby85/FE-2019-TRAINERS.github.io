@@ -10,7 +10,8 @@ body {
   min-height: 100px;
   width: 100%;
   position: fixed;
-  z-index: 50; }
+  z-index: 50;
+  transition: background-color .3s; }
 
 .header-desk__container {
   display: flex;

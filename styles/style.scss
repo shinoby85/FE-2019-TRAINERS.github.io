@@ -69,6 +69,7 @@ body {
   width: 100%;
   position: fixed;
   z-index: 50;
+  transition: background-color .3s;
 }
 
 .header-desk__container {
