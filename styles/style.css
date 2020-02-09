@@ -48,6 +48,9 @@ body {
 .header-desk__navigate__item:hover {
   color: #fff; }
 
+.nav-item-black:hover {
+  color: #000; }
+
 .home-section {
   padding-top: 250px;
   height: 100vh;
@@ -462,5 +465,8 @@ body {
   font-size: .95rem;
   letter-spacing: .004em;
   opacity: .5; }
+
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
