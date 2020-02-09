@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/fonts.css">
-    <script src="scripts/script.js"></script>
 
 </head>
 <body>
@@ -19,12 +18,13 @@
             </svg>
 
         </a>
-        <nav class="header-desk__navigate">
-            <a href="#" class="header-desk__navigate__item">About</a>
-            <a href="#" class="header-desk__navigate__item">Contact</a>
-            <a href="#" class="header-desk__navigate__item">Portfolio</a>
-            <a href="#" class="header-desk__navigate__item">Blog</a>
+        <nav id="menu" class="header-desk__navigate">
+            <a onclick="return app.scrollTo(this)" href="#aboute" class="menu header-desk__navigate__item">About</a>
+            <a onclick="return app.scrollTo(this)" href="#contact" class="menu header-desk__navigate__item">Contact</a>
+            <a onclick="return app.scrollTo(this)" href="#project" class="menu header-desk__navigate__item">Portfolio</a>
+            <a onclick="return app.scrollTo(this)" href="#" class="menu header-desk__navigate__item">Blog</a>
         </nav>
+
     </div>
 </header>
 <section class="home-section">
@@ -38,10 +38,10 @@
             </span>
         </h1>
         <a href="https://gumroad.com/l/kcakz" class="home__btn" target="_blank">Free download</a>
-        <a href="#" class="home__btn_down"></a>
+        <a id="btn_down" href="#aboute" class="home__btn_down"></a>
     </div>
 </section>
-<section class="aboute">
+<section id="aboute" class="aboute">
     <div class="container aboute__container">
         <h2 class="block-title">About Our Agency</h2>
         <p class="block-annotation">We are a new design studio based in USA. We have over 20 years of
@@ -52,7 +52,7 @@
         <img src="images/about-me-signature.png" alt="imgage signature" width="222" height="57">
     </div>
 </section>
-<section class="statistics">
+<section id="statistics" class="statistics">
     <div class="container statistics__container">
         <div class="statistics__stat-position">
             <span class="pe-7s-portfolio stat-position__label"></span>
@@ -76,7 +76,7 @@
         </div>
     </div>
 </section>
-<section class="project">
+<section id="project" class="project">
     <div class="container project__container">
         <h2 class="block-title">Best Projects</h2>
         <p class="block-annotation">Donec orci sem, pretium ac dolor et, faucibus faucibus mauris.
@@ -151,7 +151,7 @@
 
     </div>
 </section>
-<section class="contact">
+<section id="contact" class="contact">
     <div class="container contact__container">
         <div class="contact__info">
             <h2 class="block-title">Contact Info: </h2>
@@ -184,7 +184,7 @@
         </form>
     </div>
 </section>
-<footer class="footer">
+<footer id="footer" class="footer">
     <div class="container">
         <div class="footer__social">
             <a href="" class="footer__social__link fa-twitter"></a>
@@ -205,6 +205,8 @@
               ></path>
     </symbol>
 </svg>
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/script_jquery.js"></script>
 <script src="scripts/script.js"></script>
 </body>
 </html>

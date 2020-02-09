@@ -1,3 +1,4 @@
+//Смена стилизации меню при скроле от начала страницы
 document.onscroll=function (event) {
     var scrollTop=window.pageYOffset || document.documentElement.scrollTop;
     //console.log(scrollTop);
@@ -18,4 +19,24 @@ document.onscroll=function (event) {
             navItems[i].classList.remove('nav-item-black');
         }
     }
-}
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
