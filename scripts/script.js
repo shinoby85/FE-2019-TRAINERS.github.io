@@ -26,7 +26,7 @@ function changeStyle(flag){
     var navDesck=document.getElementById('hd-navigate');
     var navMobi=document.getElementById('hm-navigate');
     var mobiControl=document.getElementById('menu__control');
-    var navItems=document.getElementsByClassName('header-desk__navigate__item');
+    var navItems=document.getElementsByClassName('header__navigate__item');
     var navIcon=document.getElementsByClassName('header__logo_icon');
     if (flag==true){
         navDesck.style.backgroundColor = "#fff";
