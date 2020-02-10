@@ -1,42 +1,103 @@
+@keyframes burger {
+  0% {
+    margin: 5px 0 0 0; }
+  50% {
+    margin: 5px 4px 0 4px; }
+  100% {
+    margin: 5px 0 0 0; } }
 body {
   font-family: "worksans", sans-serif;
-  margin: 0; }
+  margin: 0;
+  position: relative; }
+
+.menu__control {
+  display: none; }
+
+.header__bg-mobile {
+  position: fixed;
+  z-index: -2;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  background: url(../images/bg-menu.jpg) no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity .5s .1s, z-index .6s; }
+
+.menu__control:checked + .header__bg-mobile {
+  z-index: 30;
+  opacity: 1; }
 
 .container {
   width: 1140px;
   margin: 0 auto; }
 
-.header-desk {
+.header {
   min-height: 100px;
   width: 100%;
   position: fixed;
   z-index: 50;
-  transition: background-color .3s; }
+  transition: background-color .3s;
+  display: none; }
 
-.header-desk__container {
+.header__container {
   display: flex;
   min-height: 100px;
   align-items: center;
   justify-content: space-between; }
 
-.header-desk__logo {
+.header__logo {
   display: block; }
 
-.header-desk__logo_icon {
+.header__logo_icon {
   fill: #fff; }
 
+/*Mobile version menu*/
+.menu-mobile {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 7px;
+  box-sizing: border-box;
+  cursor: pointer; }
+
+.line {
+  border: 1px solid #000;
+  background-color: #000;
+  display: block;
+  margin-top: 5px;
+  height: 1px; }
+
+.menu-mobile:hover .line:nth-child(1) {
+  animation: ease .4s burger;
+  animation-direction: alternate; }
+
+.menu-mobile:hover .line:nth-child(2) {
+  animation: ease .4s .15s burger;
+  animation-direction: alternate; }
+
+.menu-mobile:hover .line:nth-child(3) {
+  animation: ease .4s .3s burger;
+  animation-direction: alternate; }
+
+.header__mobile_icon {
+  fill: #fff; }
+
+/*Descktop version menu*/
 .block-show {
   display: block; }
 
 .logo__text {
   display: none; }
 
-.header-desk__navigate {
+.header__navigate {
   min-width: 380px;
   display: flex;
   justify-content: space-between; }
 
-.header-desk__navigate__item {
+.header__navigate__item {
   color: #bfbfbf;
   text-transform: uppercase;
   text-decoration: none;
@@ -45,7 +106,7 @@ body {
   transition: color .3s;
   font-weight: 500; }
 
-.header-desk__navigate__item:hover {
+.header__navigate__item:hover {
   color: #fff; }
 
 .nav-item-black:hover {

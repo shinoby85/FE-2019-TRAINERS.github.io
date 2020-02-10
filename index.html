@@ -9,20 +9,42 @@
 
 </head>
 <body>
-<!--Menu for desktop-->
-<header id="hd-navigate" class="header-desk">
-    <div class="container header-desk__container">
-        <a href="#" class="header-desk__logo">
-            <svg class="header-desk__logo_icon" width="85" height="33" id="logo-icon">
+<!--Menu for mobile-->
+<input type="checkbox" id="menu__control" class="menu__control">
+<div  class="header__bg-mobile">
+
+</div>
+<header id="hm-navigate" class="header block-show">
+
+    <div class="container header__container">
+        <a href="#" class="header__logo">
+            <svg class="header__logo_icon" width="85" height="33" >
                 <use xlink:href="#logo-light"></use>
             </svg>
 
         </a>
-        <nav id="menu" class="header-desk__navigate">
-            <a onclick="return app.scrollTo(this)" href="#aboute" class="menu header-desk__navigate__item">About</a>
-            <a onclick="return app.scrollTo(this)" href="#contact" class="menu header-desk__navigate__item">Contact</a>
-            <a onclick="return app.scrollTo(this)" href="#project" class="menu header-desk__navigate__item">Portfolio</a>
-            <a onclick="return app.scrollTo(this)" href="#" class="menu header-desk__navigate__item">Blog</a>
+        <label id="btn-mobi" class="menu-mobile" for="menu__control">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
+
+    </div>
+</header>
+<!--Menu for desktop-->
+<header id="hd-navigate" class="header">
+    <div class="container header__container">
+        <a href="#" class="header__logo">
+            <svg class="header__logo_icon" width="85" height="33" >
+                <use xlink:href="#logo-light"></use>
+            </svg>
+
+        </a>
+        <nav id="menu" class="header__navigate">
+            <a href="#aboute" class="menu header__navigate__item">About</a>
+            <a href="#contact" class="menu header__navigate__item">Contact</a>
+            <a href="#project" class="menu header__navigate__item">Portfolio</a>
+            <a href="#" class="menu header__navigate__item">Blog</a>
         </nav>
 
     </div>
