@@ -119,12 +119,36 @@ body {
 
 .menu-mobile{
   display: block;
+  position: relative;
   width: 40px;
   height: 40px;
   padding: 7px;
   box-sizing: border-box;
   cursor:pointer;
 }
+.menu-mobile:before,
+.menu-mobile:after{
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  width: 20px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 2px;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity .1s,width .1s;
+}
+.menu-mobile:before{
+  transform: rotate(45deg);
+}
+.menu-mobile:after{
+  transform: rotate(-45deg);
+}
+
 .line{
   border: 1px solid #000;
   background-color: #000;
@@ -147,6 +171,19 @@ body {
   animation-direction: alternate;
 
 }
+.menu__control:checked ~ #hm-navigate .menu-mobile .line{
+  display: none;
+}
+.menu__control:checked ~ #hm-navigate .menu-mobile:before,
+.menu__control:checked ~ #hm-navigate .menu-mobile:after{
+  opacity: 1;
+  width: 25px;
+}
+
+
+
+
+
 .header__mobile_icon{
   fill:#fff;
 }
