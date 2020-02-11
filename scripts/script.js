@@ -10,7 +10,7 @@ document.onscroll=function (event) {
         }
    // }
 };
-
+//Смена стилизации при нажатии кнопки меню
 document.getElementById('btn-mobi').addEventListener('click',function () {
     var scrollTop=window.pageYOffset || document.documentElement.scrollTop;
     var mobiControl=document.getElementById('menu__control');
@@ -20,8 +20,7 @@ document.getElementById('btn-mobi').addEventListener('click',function () {
         changeStyle(false);
     }
 });
-
-
+//Задание стиля отображения меню в зависимости от параметра
 function changeStyle(flag){
     var navDesck=document.getElementById('hd-navigate');
     var navMobi=document.getElementById('hm-navigate');
@@ -49,7 +48,13 @@ function changeStyle(flag){
         }
     }
 };
-
+//Закрытие окна мобильного меню при выборе пункта
+var mobiMenuItem=document.getElementsByClassName('mobile-menu-item-link');
+for (var i=0;i<mobiMenuItem.length;i++){
+    mobiMenuItem[i].addEventListener('click',function () {
+        document.getElementById('menu__control').checked=false;
+    })
+}
 
 
 

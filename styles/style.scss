@@ -3,6 +3,7 @@ $menu-min-height: 100px;
 $home__btn_down-color: 1px solid #fff;
 $time-animation-text: .3s;
 $contact-width: 45%;
+$time-visible-mb-menu: .2s;
 //Размер кнопки
 $home__btn_down-block-size: 50px;
 @mixin home__btn_down-style($block-size) {
@@ -54,10 +55,16 @@ $home__btn_down-block-size: 50px;
   transition: background-color .3s;
 }
 
-@keyframes burger{
-  0% { margin: 5px 0 0 0; }
-  50% { margin: 5px 4px 0 4px; }
-  100% {margin: 5px 0 0 0;}
+@keyframes burger {
+  0% {
+    margin: 5px 0 0 0;
+  }
+  50% {
+    margin: 5px 4px 0 4px;
+  }
+  100% {
+    margin: 5px 0 0 0;
+  }
 }
 
 body {
@@ -65,11 +72,17 @@ body {
   margin: 0;
   position: relative;
 }
-.menu__control{
+
+.menu__control {
   display: none;
 }
-.header__bg-mobile{
+
+.header__bg-mobile {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   z-index: -2;
   left: 0;
   right: 0;
@@ -81,10 +94,81 @@ body {
   opacity: 0;
   transition: opacity .5s .1s, z-index .6s;
 }
-.menu__control:checked+.header__bg-mobile{
+
+.menu__control:checked + .header__bg-mobile {
   z-index: 30;
   opacity: 1;
 }
+
+.box-under-menu {
+  min-height: $menu-min-height;
+}
+
+.mb-menu {
+  padding: 0;
+  list-style-type: none;
+  color: #ffffff;
+  font-family: "playfairdisplay", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-item {
+  margin-bottom: 20px;
+  opacity: 0;
+}
+
+.mb-menu .mobile-menu-item:nth-child(1) {
+  transition: opacity .1s $time-visible-mb-menu;
+}
+
+.mb-menu .mobile-menu-item:nth-child(2) {
+  transition: opacity .1s $time-visible-mb-menu+.1s;
+}
+
+.mb-menu .mobile-menu-item:nth-child(3) {
+  transition: opacity .1s $time-visible-mb-menu+.2s;
+}
+
+.mb-menu .mobile-menu-item:nth-child(4) {
+  transition: opacity .1s $time-visible-mb-menu+.3s;
+}
+
+.menu__control:checked ~ .header__bg-mobile .mobile-menu-item {
+  opacity: 1;
+}
+
+
+.mobile-menu-item-link {
+  text-decoration: none;
+  color: #d8d8d8;
+  font-family: "playfairdisplay", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.mobile-menu-item-link:hover {
+  color: #ffffff;
+}
+.mb__social__link{
+  display: flex;
+  text-decoration: none;
+  transition: opacity .5s;
+  color: #d8d8d8;
+  fill: #d8d8d8;
+  font-size: 1.13rem;
+}
+.mb__social__link:hover{
+  color: #ffffff;
+}
+
+.box-social {
+  min-height: $menu-min-height;
+}
+
 
 .container {
   width: $container-width;
@@ -117,17 +201,18 @@ body {
 
 /*Mobile version menu*/
 
-.menu-mobile{
+.menu-mobile {
   display: block;
   position: relative;
   width: 40px;
   height: 40px;
   padding: 7px;
   box-sizing: border-box;
-  cursor:pointer;
+  cursor: pointer;
 }
+
 .menu-mobile:before,
-.menu-mobile:after{
+.menu-mobile:after {
   content: '';
   position: absolute;
   background-color: #fff;
@@ -140,16 +225,18 @@ body {
   height: 2px;
   transform: rotate(45deg);
   opacity: 0;
-  transition: opacity .1s,width .1s;
+  transition: opacity .1s, width .1s;
 }
-.menu-mobile:before{
+
+.menu-mobile:before {
   transform: rotate(45deg);
 }
-.menu-mobile:after{
+
+.menu-mobile:after {
   transform: rotate(-45deg);
 }
 
-.line{
+.line {
   border: 1px solid #000;
   background-color: #000;
   display: block;
@@ -157,38 +244,38 @@ body {
   height: 1px;
 
 }
-.menu-mobile:hover .line:nth-child(1){
+
+.menu-mobile:hover .line:nth-child(1) {
   animation: ease .4s burger;
   animation-direction: alternate;
 }
-.menu-mobile:hover .line:nth-child(2){
+
+.menu-mobile:hover .line:nth-child(2) {
   animation: ease .4s .15s burger;
   animation-direction: alternate;
 
 }
-.menu-mobile:hover .line:nth-child(3){
+
+.menu-mobile:hover .line:nth-child(3) {
   animation: ease .4s .3s burger;
   animation-direction: alternate;
 
 }
-.menu__control:checked ~ #hm-navigate .menu-mobile .line{
+
+.menu__control:checked ~ #hm-navigate .menu-mobile .line {
   display: none;
 }
+
 .menu__control:checked ~ #hm-navigate .menu-mobile:before,
-.menu__control:checked ~ #hm-navigate .menu-mobile:after{
+.menu__control:checked ~ #hm-navigate .menu-mobile:after {
   opacity: 1;
   width: 25px;
 }
 
 
-
-
-
-.header__mobile_icon{
-  fill:#fff;
+.header__mobile_icon {
+  fill: #fff;
 }
-
-
 
 
 /*Descktop version menu*/
