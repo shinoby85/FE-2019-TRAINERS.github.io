@@ -622,7 +622,8 @@ body {
 .contact__into__contant {
   width: 95%; }
   .contact__into__contant .contact__info__title {
-    margin-right: 10px; }
+    margin-right: 10px;
+    font-weight: 700; }
 
 .contact__message {
   box-sizing: border-box;
